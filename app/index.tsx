@@ -3,7 +3,7 @@ import { Alert, Dimensions, StyleSheet, Text, useColorScheme, View } from "react
 
 export default function Index() {
   const colorscheme = useColorScheme()
-  const isdarkmode = colorscheme == "dark"
+  const isdarkmode = colorscheme === "dark"
   return (
     <View
       style={{
