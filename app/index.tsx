@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     height: Dimensions.get("window").height
   },
   topview: { flex: 1, justifyContent: "center", alignItems: "center" },
-  bottomview: { flex: 1, justifyContent: "center" },
+  bottomview: { flex: 1, width: "100%", justifyContent: "center" },
   title: { flex: 1, fontSize: 50, fontWeight: "bold" },
 }
 )
