@@ -18,9 +18,7 @@ export default function Index() {
       <View style={styles.bottomview}>
         <CustomButton onPress={() => Alert.alert("Hello", "Message")} title="Hello"></CustomButton>
         <CustomButton onPress={() => Alert.alert("Hello", "Message")} title="Hello"></CustomButton>
-
       </View>
-
     </View>
   );
 }
