@@ -15,7 +15,12 @@ export default function Index() {
     >
       <View style={styles.topview}>
         <Text style={[styles.title, { color: isdarkmode ? "#fff" : "#000" }]}>Thanks ...</Text></View>
-      <View style={styles.bottomview}><CustomButton onPress={() => Alert.alert("Hello", "Message")} title="Hello"></CustomButton></View>
+      <View style={styles.bottomview}>
+        <CustomButton onPress={() => Alert.alert("Hello", "Message")} title="Hello"></CustomButton>
+        <CustomButton onPress={() => Alert.alert("Hello", "Message")} title="Hello"></CustomButton>
+
+      </View>
+
     </View>
   );
 }
