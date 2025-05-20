@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "SimpleThanksReactNative",
-    "slug": "SimpleThanksReactNative",
+    "name": "Simple Thanks",
+    "slug": "simplethanks",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
