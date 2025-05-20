@@ -1,12 +1,12 @@
 import AppBarComponent from "@/components/AppBarComponent";
 import CustomButton from "@/components/CustomButton";
-import { Alert, Dimensions, StyleSheet, Text, useColorScheme, View } from "react-native";
+import { Alert, Dimensions, SafeAreaView, StyleSheet, Text, useColorScheme, View } from "react-native";
 
 export default function Index() {
   const colorscheme = useColorScheme()
   const isdarkmode = colorscheme === "dark"
   return (
-    <View
+    <SafeAreaView
       style={{
         flex: 1,
         justifyContent: "center",
@@ -21,7 +21,7 @@ export default function Index() {
         <CustomButton onPress={() => Alert.alert("Hello", "Message")} title="Hello"></CustomButton>
         <CustomButton onPress={() => Alert.alert("Hello", "Message")} title="Hello"></CustomButton>
       </View>
-    </View>
+    </SafeAreaView>
   );
 }
 const styles = StyleSheet.create({
