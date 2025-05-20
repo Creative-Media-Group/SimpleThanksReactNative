@@ -1,3 +1,4 @@
+import AppBarComponent from "@/components/AppBarComponent";
 import CustomButton from "@/components/CustomButton";
 import { Alert, Dimensions, StyleSheet, Text, useColorScheme, View } from "react-native";
 
@@ -13,6 +14,7 @@ export default function Index() {
         backgroundColor: isdarkmode ? "#000" : "#fff",
       }}
     >
+      <AppBarComponent title="Hello" />
       <View style={styles.topview}>
         <Text style={[styles.title, { color: isdarkmode ? "#fff" : "#000" }]}>Thanks ...</Text></View>
       <View style={styles.bottomview}>
