@@ -1,17 +1,20 @@
 import CustomButton from "@/components/CustomButton";
-import { Alert, Dimensions, StyleSheet, Text, View } from "react-native";
+import { Alert, Dimensions, StyleSheet, Text, useColorScheme, View } from "react-native";
 
 export default function Index() {
+  const colorscheme = useColorScheme()
+  const isdarkmode = colorscheme == "dark"
   return (
     <View
       style={{
         flex: 1,
         justifyContent: "center",
         alignItems: "center",
+        backgroundColor: isdarkmode ? "#000" : "#fff",
       }}
     >
       <View style={styles.topview}>
-        <Text style={styles.title}>Thanks ...</Text></View>
+        <Text style={[styles.title, { color: isdarkmode ? "#fff" : "#000" }]}>Thanks ...</Text></View>
       <View style={styles.bottomview}><CustomButton onPress={() => Alert.alert("Hello", "Message")} title="Hello"></CustomButton></View>
     </View>
   );
