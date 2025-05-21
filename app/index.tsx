@@ -1,27 +1,24 @@
 import AppBarComponent from "@/components/AppBarComponent";
+import isDarkMode from "@/components/CheckDarkMode";
 import CustomButton from "@/components/CustomButton";
-import { Alert, Dimensions, SafeAreaView, StyleSheet, Text, useColorScheme, View } from "react-native";
+import { Alert, Dimensions, StyleSheet, Text, View } from "react-native";
 
 export default function Index() {
-  const colorscheme = useColorScheme()
-  const isdarkmode = colorscheme === "dark"
   return (
-    <SafeAreaView
+    <View
       style={{
         flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: isdarkmode ? "#000" : "#fff",
+        backgroundColor: isDarkMode() ? "#000" : "#fff",
       }}
     >
-      <AppBarComponent title="Hello" />
+      <AppBarComponent title="Simple Thanks" />
       <View style={styles.topview}>
-        <Text style={[styles.title, { color: isdarkmode ? "#fff" : "#000" }]}>Thanks ...</Text></View>
+        <Text style={[styles.title, { color: isDarkMode() ? "#fff" : "#000" }]}>Thanks ...</Text></View>
       <View style={styles.bottomview}>
         <CustomButton onPress={() => Alert.alert("Hello", "Message")} title="Hello"></CustomButton>
         <CustomButton onPress={() => Alert.alert("Hello", "Message")} title="Hello"></CustomButton>
       </View>
-    </SafeAreaView>
+    </View>
   );
 }
 const styles = StyleSheet.create({
