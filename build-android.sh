@@ -1,3 +1,1 @@
-cd android
-./gradlew assembleRelease
-./gradlew bundleRelease
+npx eas build --platform android --local
