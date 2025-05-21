@@ -26,8 +26,8 @@ export default function Index() {
       <View style={styles.topview}>
         <Text style={[styles.title]}>Thanks ...</Text></View>
       <View style={styles.bottomview}>
-        <CustomButton onPress={() => Alert.alert("Hello", "Message")} title="Hello"></CustomButton>
-        <CustomButton onPress={() => Alert.alert("Hello", "Message")} title="Hello"></CustomButton>
+        <CustomButton onPress={() => Alert.alert("Hello", "Message")} title="Happy Birthday"></CustomButton>
+        <CustomButton onPress={() => Alert.alert("Hello", "Message")} title="Happy Mothersday"></CustomButton>
       </View>
     </View>
   );
