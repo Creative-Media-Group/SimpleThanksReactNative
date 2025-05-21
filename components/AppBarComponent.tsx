@@ -8,11 +8,15 @@ interface AppBarComponentProps {
 }
 
 const AppBarComponent: React.FC<AppBarComponentProps> = ({ title }) => {
+    const styles = StyleSheet.create({
+        bg: { backgroundColor: isDarkMode() ? "#000" : "#fff" },
+        title: { color: isDarkMode() ? "#fff" : "#000" },
+    });
     return (
         <Appbar.Header style={styles.bg}>
-            <Appbar.Content title={title} style={styles.title} />
+            <Appbar.Content title={title} titleStyle={styles.title} />
         </Appbar.Header>
     );
 };
-const styles = StyleSheet.create({ bg: { backgroundColor: isDarkMode() ? "#000" : "#fff" }, title: { color: isDarkMode() ? "#fff" : "#000" } });
+
 export default AppBarComponent;

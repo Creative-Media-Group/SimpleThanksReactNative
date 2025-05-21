@@ -4,6 +4,17 @@ import CustomButton from "@/components/CustomButton";
 import { Alert, Dimensions, StyleSheet, Text, View } from "react-native";
 
 export default function Index() {
+  const styles = StyleSheet.create({
+    bg: {
+      flex: 1, resizeMode: "cover",
+      width: Dimensions.get("window").width,
+      height: Dimensions.get("window").height
+    },
+    topview: { flex: 1, justifyContent: "center", alignItems: "center" },
+    bottomview: { flex: 1, width: "100%", justifyContent: "center" },
+    title: { flex: 1, fontSize: 50, fontWeight: "bold", color: isDarkMode() ? "#fff" : "#000" },
+  },
+  )
   return (
     <View
       style={{
@@ -21,14 +32,3 @@ export default function Index() {
     </View>
   );
 }
-const styles = StyleSheet.create({
-  bg: {
-    flex: 1, resizeMode: "cover",
-    width: Dimensions.get("window").width,
-    height: Dimensions.get("window").height
-  },
-  topview: { flex: 1, justifyContent: "center", alignItems: "center" },
-  bottomview: { flex: 1, width: "100%", justifyContent: "center" },
-  title: { flex: 1, fontSize: 50, fontWeight: "bold", color: isDarkMode() ? "#fff" : "#000" },
-},
-)
