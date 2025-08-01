@@ -1,9 +1,10 @@
 import isDarkMode from "@/components/CheckDarkMode";
 import CustomButton from "@/components/CustomButton";
 import { Alert, Dimensions, StyleSheet, Text, View } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
+import { SafeAreaView, useSafeAreaInsets } from "react-native-safe-area-context";
 ;
 export default function Index() {
+  const insets = useSafeAreaInsets();
   const styles = StyleSheet.create({
     bg: {
       flex: 1, resizeMode: "cover",
