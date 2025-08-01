@@ -14,7 +14,11 @@ export default function Index() {
     topview: { flex: 1, justifyContent: "center", alignItems: "center" },
     bottomview: { flex: 1, width: "100%", justifyContent: "flex-end", gap: 10, padding: 10 },
     title: { flex: 1, fontSize: 50, fontWeight: "bold", color: isDarkMode() ? "#fff" : "#000" },
-    safeareaview: { flex: 1 }
+    safeareaview: {
+      flex: 1,
+      justifyContent: "center",
+      alignItems: "center",
+    }
   },
   )
   return (
