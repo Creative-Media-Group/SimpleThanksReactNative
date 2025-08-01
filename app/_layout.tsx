@@ -6,6 +6,7 @@ export default function RootLayout() {
   return (<>
     <Stack>
       <Stack.Screen name="index" options={{ title: "Simple thanks" }} />
+      <Stack.Screen name="about" options={{ title: "About" }} />
     </Stack>
     <StatusBar style={isDarkMode() ? "light" : "dark"} />
   </>
