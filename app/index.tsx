@@ -1,9 +1,11 @@
 import isDarkMode from "@/components/CheckDarkMode";
 import CustomButton from "@/components/CustomButton";
+import { i18n } from "@/utils/mylocalisation";
 import { Alert, Dimensions, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function Index() {
+  var text = i18n.t("text")
   const styles = StyleSheet.create({
     bg: {
       flex: 1, resizeMode: "cover",
@@ -24,7 +26,7 @@ export default function Index() {
     <SafeAreaView style={styles.safeareaview}>
       <View>
         <View style={styles.topview}>
-          <Text style={[styles.title]}>Thanks ...</Text></View>
+          <Text style={[styles.title]}>{text}</Text></View>
         <View style={styles.bottomview}>
           <CustomButton onPress={() => Alert.alert("Hello", "Message")} title="Happy Birthday"></CustomButton>
           <CustomButton onPress={() => Alert.alert("Hello", "Message")} title="Happy Mothersday"></CustomButton>
