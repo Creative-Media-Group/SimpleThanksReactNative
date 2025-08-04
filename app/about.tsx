@@ -7,7 +7,7 @@ export default function Index() {
     })
     return (
         <SafeAreaView style={styles.safeareaview}>
-            <View><Text></Text></View>
+            <View><Text>Test</Text></View>
         </SafeAreaView>
     )
 }
