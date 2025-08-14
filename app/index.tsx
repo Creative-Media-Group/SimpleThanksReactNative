@@ -8,13 +8,30 @@ export default function Index() {
   var text = i18n.t("text")
   const styles = StyleSheet.create({
     bg: {
-      flex: 1, resizeMode: "cover",
+      flex: 1,
+      resizeMode: "cover",
       width: Dimensions.get("window").width,
       height: Dimensions.get("window").height
     },
-    topview: { flex: 1, justifyContent: "center", alignItems: "center" },
-    bottomview: { flex: 1, width: "100%", justifyContent: "flex-end", gap: 10, padding: 10, alignContent: "center" },
-    title: { flex: 1, fontSize: 50, fontWeight: "bold", color: isDarkMode() ? "white" : "black" }, //color: isDarkMode() ? "#fff" : "#000"
+    topview: {
+      flex: 1,
+      justifyContent: "center",
+      alignItems: "center"
+    },
+    bottomview: {
+      flex: 1,
+      width: "100%",
+      justifyContent: "flex-end",
+      gap: 10,
+      padding: 10,
+      alignContent: "center"
+    },
+    title: {
+      flex: 1,
+      fontSize: 50,
+      fontWeight: "bold",
+      color: isDarkMode() ? "white" : "black"
+    }, //color: isDarkMode() ? "#fff" : "#000"
     safeareaview: {
       flex: 1,
       justifyContent: "center",
