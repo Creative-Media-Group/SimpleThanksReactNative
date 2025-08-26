@@ -22,6 +22,11 @@ export default function Index() {
             }>
                 My repository:
             </Text>
+            <Text style={
+                { color: isDarkMode() ? "white" : "black" }
+            }>
+                My repository:
+            </Text>
             <Link href={"https://github.com/Creative-Media-Group/SimpleThanksReactNative"} style={{ color: "blue" }}>GitHub</Link>
             <Text style={
                 { color: isDarkMode() ? "white" : "black" }
