@@ -1,13 +1,40 @@
+import isDarkMode from "@/components/CheckDarkMode";
+import { Link } from "expo-router";
 import { StyleSheet, Text, View } from "react-native";
-import { SafeAreaView, useSafeAreaInsets } from "react-native-safe-area-context";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 export default function Index() {
     const insets = useSafeAreaInsets()
     const styles = StyleSheet.create({
-        safeareaview: { flex: 1 }
+        safeareaview: { flex: 1 },
+        view: {
+            alignContent: "space-around",
+            justifyContent: "center",
+            gap: 10,
+            width: "100%",
+            height: "100%",
+            alignItems: "center"
+        }
     })
     return (
-        <SafeAreaView style={styles.safeareaview}>
-            <View><Text>Test</Text></View>
-        </SafeAreaView>
+        <View style={styles.view}>
+            <Text style={
+                { color: isDarkMode() ? "white" : "black" }
+            }>
+                My repository:
+            </Text>
+            <Link href={"https://github.com/Creative-Media-Group/SimpleThanksReactNative"} style={{ color: "blue" }}>GitHub</Link>
+            <Text style={
+                { color: isDarkMode() ? "white" : "black" }
+            }>
+                My repository:
+            </Text>
+            <Link href={"https://github.com/Creative-Media-Group/SimpleThanksReactNative"} style={{ color: "blue" }}>GitHub</Link>
+            <Text style={
+                { color: isDarkMode() ? "white" : "black" }
+            }>
+                My repository:
+            </Text>
+            <Link href={"https://github.com/Creative-Media-Group/SimpleThanksReactNative"} style={{ color: "blue" }}>GitHub</Link>
+        </View>
     )
 }
