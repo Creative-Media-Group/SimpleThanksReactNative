@@ -5,7 +5,7 @@ import { Alert, Dimensions, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function Index() {
-  var text = i18n.t("text")
+  let text = i18n.t("text")
   const styles = StyleSheet.create({
     bg: {
       flex: 1,
