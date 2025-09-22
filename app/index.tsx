@@ -1,56 +1,55 @@
 import isDarkMode from "@/components/CheckDarkMode";
 import CustomButton from "@/components/CustomButton";
 import { i18n } from "@/utils/mylocalisation";
-import { Alert, Dimensions, StyleSheet, Text, View } from "react-native";
+import { Alert, StyleSheet, Text, useWindowDimensions, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function Index() {
-  let text = i18n.t("text")
+  const text = i18n.t("text");
+  const { width, height } = useWindowDimensions();
+  const isDark = isDarkMode();
+
   const styles = StyleSheet.create({
     bg: {
       flex: 1,
       resizeMode: "cover",
-      width: Dimensions.get("window").width,
-      height: Dimensions.get("window").height
+      width: width,
+      height: height,
     },
     topview: {
       flex: 1,
-      //justifyContent: "center",
-      alignItems: "center"
+      alignItems: "center",
     },
     bottomview: {
       flex: 1,
       width: "100%",
       gap: 10,
       padding: 10,
-      alignContent: "center",
-      backgroundColor: "green"
+      alignItems: "center",
+      backgroundColor: "green",
     },
     title: {
       flex: 1,
       fontSize: 50,
       fontWeight: "bold",
-      color: isDarkMode() ? "white" : "black"
-    }, //color: isDarkMode() ? "#fff" : "#000"
+      color: isDark ? "white" : "black",
+    },
     safeareaview: {
       flex: 1,
-      justifyContent: "center",
-      alignItems: "center",
-    }
-  },
-  )
+    },
+  });
+
   return (
     <SafeAreaView style={styles.safeareaview}>
-      <View>
-        <View style={styles.topview}>
-          <Text style={[styles.title]}>{text}</Text></View>
-        <View style={styles.bottomview}>
-          <CustomButton onPress={() => Alert.alert("Hello", "Message")} title="Happy Birthday"></CustomButton>
-          <CustomButton onPress={() => Alert.alert("Hello", "Message")} title="Happy Mothersday"></CustomButton>
-          <CustomButton onPress={() => Alert.alert("Hello", "Message")} title="Happy Birthday"></CustomButton>
-          <CustomButton onPress={() => Alert.alert("Hello", "Message")} title="Happy Birthday"></CustomButton>
-          <CustomButton onPress={() => Alert.alert("Hello", "Message")} title="Happy Birthday"></CustomButton>
-        </View>
+      <View style={styles.topview}>
+        <Text style={styles.title}>{text}</Text>
+      </View>
+      <View style={styles.bottomview}>
+        <CustomButton onPress={() => Alert.alert("Hello", "Message")} title="Happy Birthday" />
+        <CustomButton onPress={() => Alert.alert("Hello", "Message")} title="Happy Mothersday" />
+        <CustomButton onPress={() => Alert.alert("Hello", "Message")} title="Happy Birthday" />
+        <CustomButton onPress={() => Alert.alert("Hello", "Message")} title="Happy Birthday" />
+        <CustomButton onPress={() => Alert.alert("Hello", "Message")} title="Happy Birthday" />
       </View>
     </SafeAreaView>
   );
