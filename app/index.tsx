@@ -1,7 +1,7 @@
 import isDarkMode from "@/components/CheckDarkMode";
 import CustomButton from "@/components/CustomButton";
 import { i18n } from "@/utils/mylocalisation";
-import { Alert, Dimensions, ScrollView, StyleSheet, Text, View } from "react-native";
+import { Alert, Dimensions, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function Index() {
@@ -44,13 +44,13 @@ export default function Index() {
       <View>
         <View style={styles.topview}>
           <Text style={[styles.title]}>{text}</Text></View>
-        <ScrollView style={styles.bottomview} contentContainerStyle={styles.bottomview}>
+        <View style={styles.bottomview}>
           <CustomButton onPress={() => Alert.alert("Hello", "Message")} title="Happy Birthday"></CustomButton>
           <CustomButton onPress={() => Alert.alert("Hello", "Message")} title="Happy Mothersday"></CustomButton>
           <CustomButton onPress={() => Alert.alert("Hello", "Message")} title="Happy Birthday"></CustomButton>
           <CustomButton onPress={() => Alert.alert("Hello", "Message")} title="Happy Birthday"></CustomButton>
           <CustomButton onPress={() => Alert.alert("Hello", "Message")} title="Happy Birthday"></CustomButton>
-        </ScrollView>
+        </View>
       </View>
     </SafeAreaView>
   );
