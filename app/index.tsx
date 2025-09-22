@@ -1,7 +1,7 @@
 import isDarkMode from "@/components/CheckDarkMode";
 import CustomButton from "@/components/CustomButton";
 import { i18n } from "@/utils/mylocalisation";
-import { Alert, Dimensions, StyleSheet, Text, View } from "react-native";
+import { Alert, Dimensions, ScrollView, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function Index() {
@@ -15,16 +15,16 @@ export default function Index() {
     },
     topview: {
       flex: 1,
-      justifyContent: "center",
+      //justifyContent: "center",
       alignItems: "center"
     },
     bottomview: {
       flex: 1,
       width: "100%",
-      justifyContent: "flex-end",
       gap: 10,
       padding: 10,
-      alignContent: "center"
+      alignContent: "center",
+      backgroundColor: "green"
     },
     title: {
       flex: 1,
@@ -44,10 +44,13 @@ export default function Index() {
       <View>
         <View style={styles.topview}>
           <Text style={[styles.title]}>{text}</Text></View>
-        <View style={styles.bottomview}>
+        <ScrollView style={styles.bottomview} contentContainerStyle={styles.bottomview}>
           <CustomButton onPress={() => Alert.alert("Hello", "Message")} title="Happy Birthday"></CustomButton>
           <CustomButton onPress={() => Alert.alert("Hello", "Message")} title="Happy Mothersday"></CustomButton>
-        </View>
+          <CustomButton onPress={() => Alert.alert("Hello", "Message")} title="Happy Birthday"></CustomButton>
+          <CustomButton onPress={() => Alert.alert("Hello", "Message")} title="Happy Birthday"></CustomButton>
+          <CustomButton onPress={() => Alert.alert("Hello", "Message")} title="Happy Birthday"></CustomButton>
+        </ScrollView>
       </View>
     </SafeAreaView>
   );
