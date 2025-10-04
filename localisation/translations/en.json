@@ -1,5 +1,11 @@
 {
     "title": "Simple Thanks",
     "text": "Thanks ...",
-    "about": "About"
+    "about": "About",
+    "motersday": "Mothersday",
+    "happymotersday": "Happy Mothersday",
+    "birthday": "Birthday",
+    "happybirthday": "Happy Birthday",
+    "fathersday": "Fathersday",
+    "happyfathersday": "Happy Fathersday"
 }
