@@ -2,9 +2,17 @@ import isDarkMode from "@/components/CheckDarkMode";
 import CustomButton from "@/components/CustomButton";
 import { i18n } from "@/utils/mylocalisation";
 import { useAudioPlayer } from "expo-audio";
+import * as Device from 'expo-device';
 import { Alert, ScrollView, StyleSheet, Text, useWindowDimensions, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-
+const platform = Device.osName?.toLowerCase();
+function myalert(title: string, message: string) {
+  if (platform === "android") {
+    Alert.alert(title, message)
+  } else {
+    alert(message)
+  }
+}
 export default function Index() {
   const text = i18n.t("text");
   const motersday = i18n.t("motersday")
@@ -14,7 +22,7 @@ export default function Index() {
   const fathersday = i18n.t("fathersday")
   const happyfathersday = i18n.t("happyfathersday")
   const website = i18n.t("website")
-  const myfunction = i18n.t("Function is under construction")
+  const myfunction = i18n.t("function")
   const { width, height } = useWindowDimensions();
   const isDark = isDarkMode();
 
@@ -61,9 +69,9 @@ export default function Index() {
       </View>
       <ScrollView style={styles.bottomview} contentContainerStyle={{ gap: 10, padding: 10 }}>
         <CustomButton onPress={() => playaudio()} title={happybirthday} />
-        <CustomButton onPress={() => Alert.alert(motersday, happymotersday)} title="Happy Mothersday" />
-        <CustomButton onPress={() => Alert.alert(fathersday, happyfathersday)} title="Happy Fathersday" />
-        <CustomButton onPress={() => Alert.alert(website, myfunction)} title="Website" />
+        <CustomButton onPress={() => myalert(motersday, happymotersday)} title="Happy Mothersday" />
+        <CustomButton onPress={() => myalert(fathersday, happyfathersday)} title="Happy Fathersday" />
+        <CustomButton onPress={() => myalert(website, myfunction)} title="Website" />
       </ScrollView>
     </SafeAreaView>
   );
