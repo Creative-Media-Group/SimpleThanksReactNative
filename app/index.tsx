@@ -7,6 +7,14 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function Index() {
   const text = i18n.t("text");
+  const motersday = i18n.t("motersday")
+  const happymotersday = i18n.t("happymotersday")
+  // const birthday = i18n.t("birthday")
+  const happybirthday = i18n.t("happybirthday")
+  const fathersday = i18n.t("fathersday")
+  const happyfathersday = i18n.t("happyfathersday")
+  const website = i18n.t("website")
+  const myfunction = i18n.t("Function is under construction")
   const { width, height } = useWindowDimensions();
   const isDark = isDarkMode();
 
@@ -52,10 +60,10 @@ export default function Index() {
         <Text style={styles.title}>{text}</Text>
       </View>
       <ScrollView style={styles.bottomview} contentContainerStyle={{ gap: 10, padding: 10 }}>
-        <CustomButton onPress={() => playaudio()} title="Happy Birthday" />
-        <CustomButton onPress={() => Alert.alert("Mothersday", "Happy Mothersday")} title="Happy Mothersday" />
-        <CustomButton onPress={() => Alert.alert("Fathersday", "Happy Fathersday")} title="Happy Fathersday" />
-        <CustomButton onPress={() => Alert.alert("Website", "Function is under construction")} title="Website" />
+        <CustomButton onPress={() => playaudio()} title={happybirthday} />
+        <CustomButton onPress={() => Alert.alert(motersday, happymotersday)} title="Happy Mothersday" />
+        <CustomButton onPress={() => Alert.alert(fathersday, happyfathersday)} title="Happy Fathersday" />
+        <CustomButton onPress={() => Alert.alert(website, myfunction)} title="Website" />
       </ScrollView>
     </SafeAreaView>
   );
