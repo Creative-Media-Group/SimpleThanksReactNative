@@ -37,7 +37,7 @@ export default function Index() {
       flex: 1,
     },
   });
-  const audiosrc = require("../assets/sound/we-wish-you-a-merry-christmas.mp3")
+  const audiosrc = require("../assets/sounds/happy-birthday-whistled.wav")
   const player = useAudioPlayer(audiosrc)
 
   const playaudio = () => {
@@ -54,8 +54,8 @@ export default function Index() {
       <ScrollView style={styles.bottomview} contentContainerStyle={{ gap: 10, padding: 10 }}>
         <CustomButton onPress={() => playaudio()} title="Happy Birthday" />
         <CustomButton onPress={() => Alert.alert("Mothersday", "Happy Mothersday")} title="Happy Mothersday" />
-        <CustomButton onPress={() => Alert.alert("Hello", "Message")} title="Happy Fathersday" />
-        <CustomButton onPress={() => Alert.alert("Hello", "Message")} title="Website" />
+        <CustomButton onPress={() => Alert.alert("Fathersday", "Happy Fathersday")} title="Happy Fathersday" />
+        <CustomButton onPress={() => Alert.alert("Website", "Function is under construction")} title="Website" />
       </ScrollView>
     </SafeAreaView>
   );
