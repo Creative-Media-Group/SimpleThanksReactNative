@@ -1,6 +1,7 @@
 import isDarkMode from "@/components/CheckDarkMode";
 import CustomButton from "@/components/CustomButton";
 import { i18n } from "@/utils/mylocalisation";
+import { useAudioPlayer } from "expo-audio";
 import { Alert, ScrollView, StyleSheet, Text, useWindowDimensions, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
@@ -36,6 +37,14 @@ export default function Index() {
       flex: 1,
     },
   });
+  const audiosrc = require("../assets/sound/we-wish-you-a-merry-christmas.mp3")
+  const player = useAudioPlayer(audiosrc)
+
+  const playaudio = () => {
+    player.seekTo(0);
+    player.play()
+    // player.release()
+  }
 
   return (
     <SafeAreaView style={styles.safeareaview}>
@@ -43,7 +52,7 @@ export default function Index() {
         <Text style={styles.title}>{text}</Text>
       </View>
       <ScrollView style={styles.bottomview} contentContainerStyle={{ gap: 10, padding: 10 }}>
-        <CustomButton onPress={() => Alert.alert("Hello", "Message")} title="Happy Birthday" />
+        <CustomButton onPress={() => playaudio()} title="Happy Birthday" />
         <CustomButton onPress={() => Alert.alert("Mothersday", "Happy Mothersday")} title="Happy Mothersday" />
         <CustomButton onPress={() => Alert.alert("Hello", "Message")} title="Happy Fathersday" />
         <CustomButton onPress={() => Alert.alert("Hello", "Message")} title="Website" />
