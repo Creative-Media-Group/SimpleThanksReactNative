@@ -44,10 +44,9 @@ export default function Index() {
       </View>
       <ScrollView style={styles.bottomview} contentContainerStyle={{ gap: 10, padding: 10 }}>
         <CustomButton onPress={() => Alert.alert("Hello", "Message")} title="Happy Birthday" />
-        <CustomButton onPress={() => Alert.alert("Hello", "Message")} title="Happy Mothersday" />
-        <CustomButton onPress={() => Alert.alert("Hello", "Message")} title="Happy Birthday" />
-        <CustomButton onPress={() => Alert.alert("Hello", "Message")} title="Happy Birthday" />
-        <CustomButton onPress={() => Alert.alert("Hello", "Message")} title="Happy Birthday" />
+        <CustomButton onPress={() => Alert.alert("Mothersday", "Happy Mothersday")} title="Happy Mothersday" />
+        <CustomButton onPress={() => Alert.alert("Hello", "Message")} title="Happy Fathersday" />
+        <CustomButton onPress={() => Alert.alert("Hello", "Message")} title="Website" />
       </ScrollView>
     </SafeAreaView>
   );
