@@ -7,11 +7,13 @@
     "development": {
       "developmentClient": true,
       "distribution": "internal"
-    },"development_tv": {
+    },
+    "development_tv": {
       "extends": "development",
       "env": {
         "EXPO_TV": "1"
-      },"channel": "development"
+      },
+      "channel": "development"
     },
     "preview": {
       "distribution": "internal"
