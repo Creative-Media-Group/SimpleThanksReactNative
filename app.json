@@ -37,6 +37,7 @@
         }
       ],
       "expo-web-browser",
+      "@react-native-tvos/config-tv",
       "expo-localization",
       [
         "expo-build-properties",

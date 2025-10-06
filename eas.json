@@ -7,9 +7,21 @@
     "development": {
       "developmentClient": true,
       "distribution": "internal"
+    },"development_tv": {
+      "extends": "development",
+      "env": {
+        "EXPO_TV": "1"
+      },"channel": "development"
     },
     "preview": {
       "distribution": "internal"
+    },
+    "preview_tv": {
+      "extends": "preview",
+      "env": {
+        "EXPO_TV": "1"
+      },
+      "channel": "preview"
     },
     "production": {
       "autoIncrement": true
