@@ -1,4 +1,4 @@
-import isDarkMode from "@/components/CheckDarkMode";
+import IsDarkMode from "@/components/CheckDarkMode";
 import { i18n } from "@/utils/mylocalisation";
 import { Ionicons } from "@expo/vector-icons";
 import { Tabs } from "expo-router";
@@ -9,16 +9,16 @@ export default function RootLayout() {
   return <Tabs
     screenOptions={{
       sceneStyle: {
-        backgroundColor: isDarkMode() ? "black" : "white"
+        backgroundColor: IsDarkMode() ? "black" : "white"
       },
       headerStyle: {
-        backgroundColor: isDarkMode() ? "black" : "white"
+        backgroundColor: IsDarkMode() ? "black" : "white"
       },
       tabBarStyle: {
-        backgroundColor: isDarkMode() ? "black" : "white"
+        backgroundColor: IsDarkMode() ? "black" : "white"
       },
       headerTitleStyle: {
-        color: isDarkMode() ? "white" : "black"
+        color: IsDarkMode() ? "white" : "black"
       }
     }}>
     <Tabs.Screen name="index" options={{ title: title, tabBarIcon: ({ color, size }) => (<Ionicons name="home" color={color} size={size} />) }} />
