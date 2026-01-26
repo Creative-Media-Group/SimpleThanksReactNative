@@ -3,8 +3,11 @@ import CustomButton from "@/components/CustomButton";
 import { i18n } from "@/utils/mylocalisation";
 import { useAudioPlayer } from "expo-audio";
 import * as Device from 'expo-device';
+import * as Linking from 'expo-linking';
 import { Alert, ScrollView, StyleSheet, Text, useWindowDimensions, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+
+
 const platform = Device.osName?.toLowerCase();
 function myalert(title: string, message: string) {
   if (platform === "android") {
@@ -61,7 +64,15 @@ export default function Index() {
     player.play()
     // player.release()
   }
-
+  const funcmothersday = () => {
+    return myalert(motersday, happymotersday)
+  }
+  const funcfathersday = () => {
+    return myalert(fathersday, happyfathersday)
+  }
+  const funcwebseite = () => {
+    return Linking.openURL("https://mywebsite-tct123.fly.dev/")
+  }
   return (
     <SafeAreaView style={styles.safeareaview}>
       <View style={styles.topview}>
@@ -69,9 +80,9 @@ export default function Index() {
       </View>
       <ScrollView style={styles.bottomview} contentContainerStyle={{ gap: 10, padding: 10 }}>
         <CustomButton onPress={() => playaudio()} title={happybirthday} />
-        <CustomButton onPress={() => myalert(motersday, happymotersday)} title="Happy Mothersday" />
-        <CustomButton onPress={() => myalert(fathersday, happyfathersday)} title="Happy Fathersday" />
-        <CustomButton onPress={() => myalert(website, myfunction)} title="Website" />
+        <CustomButton onPress={() => funcmothersday()} title="Happy Mothersday" />
+        <CustomButton onPress={() => funcfathersday()} title="Happy Fathersday" />
+        <CustomButton onPress={() => funcwebseite()} title="Website" />
       </ScrollView>
     </SafeAreaView>
   );
