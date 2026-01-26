@@ -43,7 +43,6 @@ export default function Index() {
     bottomview: {
       flex: 1,
       width: "100%",
-      gap: 10,
       paddingEnd: 10,
     },
     title: {
@@ -55,6 +54,8 @@ export default function Index() {
     safeareaview: {
       flex: 1,
     },
+    contentcontainer: { gap: 10, padding: 10, alignItems: "center" },
+    button: { width: "100%" }
   });
   const audiosrc = require("../assets/sounds/happy-birthday-whistled.wav")
   const player = useAudioPlayer(audiosrc)
@@ -78,11 +79,19 @@ export default function Index() {
       <View style={styles.topview}>
         <Text style={styles.title}>{text}</Text>
       </View>
-      <ScrollView style={styles.bottomview} contentContainerStyle={{ gap: 10, padding: 10 }}>
-        <CustomButton onPress={() => playaudio()} title={happybirthday} />
-        <CustomButton onPress={() => funcmothersday()} title="Happy Mothersday" />
-        <CustomButton onPress={() => funcfathersday()} title="Happy Fathersday" />
-        <CustomButton onPress={() => funcwebseite()} title="Website" />
+      <ScrollView style={styles.bottomview} contentContainerStyle={styles.contentcontainer}>
+        <View style={styles.button}>
+          <CustomButton onPress={() => playaudio()} title={happybirthday} />
+        </View>
+        <View style={styles.button}>
+          <CustomButton onPress={() => funcmothersday()} title="Happy Mothersday" />
+        </View>
+        <View style={styles.button}>
+          <CustomButton onPress={() => funcfathersday()} title="Happy Fathersday" />
+        </View>
+        <View style={styles.button}>
+          <CustomButton onPress={() => funcwebseite()} title="Website" />
+        </View>
       </ScrollView>
     </SafeAreaView>
   );
