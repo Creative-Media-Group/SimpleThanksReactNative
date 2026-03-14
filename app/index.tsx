@@ -16,6 +16,9 @@ function myalert(title: string, message: string) {
     alert(message)
   }
 }
+
+const audiosrc = require("../assets/sounds/happy-birthday-whistled.wav")
+
 export default function Index() {
   const text = i18n.t("text");
   const motersday = i18n.t("motersday")
@@ -57,13 +60,11 @@ export default function Index() {
     contentcontainer: { gap: 10, padding: 10, alignItems: "center" },
     button: { width: "100%" }
   });
-  const audiosrc = require("../assets/sounds/happy-birthday-whistled.wav")
   const player = useAudioPlayer(audiosrc)
 
   const playaudio = () => {
     player.seekTo(0);
     player.play()
-    // player.release()
   }
   const funcmothersday = () => {
     return myalert(motersday, happymotersday)
