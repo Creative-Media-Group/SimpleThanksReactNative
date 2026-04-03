@@ -1,28 +1,18 @@
 import IsDarkMode from "@/components/CheckDarkMode";
 import { i18n } from "@/utils/mylocalisation";
-import { Ionicons } from "@expo/vector-icons";
-import { Tabs } from "expo-router";
-
+import { NativeTabs } from 'expo-router/unstable-native-tabs';
 export default function RootLayout() {
   let title = i18n.t("title")
   let about = i18n.t("about")
-  return <Tabs
-    screenOptions={{
-      sceneStyle: {
-        backgroundColor: IsDarkMode() ? "black" : "white"
-      },
-      headerStyle: {
-        backgroundColor: IsDarkMode() ? "black" : "white"
-      },
-      tabBarStyle: {
-        backgroundColor: IsDarkMode() ? "black" : "white"
-      },
-      headerTitleStyle: {
-        color: IsDarkMode() ? "white" : "black"
-      }
-    }}>
-    <Tabs.Screen name="index" options={{ title: title, tabBarIcon: ({ color, size }) => (<Ionicons name="home" color={color} size={size} />) }} />
-    <Tabs.Screen name="about" options={{ title: about, tabBarIcon: ({ color, size }) => (<Ionicons name="information" color={color} size={size} />) }} />
-  </Tabs>
+  return <NativeTabs backgroundColor={IsDarkMode() ? "black" : "white"}>
+    <NativeTabs.Trigger name="index">
+      <NativeTabs.Trigger.Label>{title}</NativeTabs.Trigger.Label>
+      <NativeTabs.Trigger.Icon sf="house.fill" md="home" />
+    </NativeTabs.Trigger>
+    <NativeTabs.Trigger name="about">
+      <NativeTabs.Trigger.Icon sf="info" md="info" />
+      <NativeTabs.Trigger.Label>{about}</NativeTabs.Trigger.Label>
+    </NativeTabs.Trigger>
+  </NativeTabs>
     ;
 }

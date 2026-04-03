@@ -1,4 +1,4 @@
-import isDarkMode from "@/components/CheckDarkMode";
+// import isDarkMode from "@/components/CheckDarkMode";
 import CustomButton from "@/components/CustomButton";
 import { i18n } from "@/utils/mylocalisation";
 import { useAudioPlayer } from "expo-audio";
@@ -30,7 +30,7 @@ export default function Index() {
   const website = i18n.t("website")
   const myfunction = i18n.t("function")
   const { width, height } = useWindowDimensions();
-  const isDark = isDarkMode();
+  //const isDark = isDarkMode();
 
   console.log(website)
   console.log(myfunction)
@@ -54,7 +54,7 @@ export default function Index() {
       flex: 1,
       fontSize: 50,
       fontWeight: "bold",
-      color: isDark ? "white" : "black",
+      //color: isDark ? "white" : "black",
     },
     safeareaview: {
       flex: 1,
