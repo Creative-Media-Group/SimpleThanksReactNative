@@ -32,6 +32,8 @@ export default function Index() {
   const { width, height } = useWindowDimensions();
   const isDark = isDarkMode();
 
+  console.log(website)
+  console.log(myfunction)
   const styles = StyleSheet.create({
     bg: {
       flex: 1,
