@@ -2,8 +2,10 @@
 import IsDarkMode from "@/components/CheckDarkMode";
 import { Link } from "expo-router";
 import { StyleSheet, Text, View } from "react-native";
+import { i18n } from "../utils/mylocalisation";
 
 export default function Index() {
+    const abouttext = i18n.t("about");
     const styles = StyleSheet.create({
         safeareaview: { flex: 1 },
         view: {
@@ -20,7 +22,7 @@ export default function Index() {
             <Text style={
                 { color: IsDarkMode() ? "white" : "black" }
             }>
-                My repository:
+                {abouttext}:
             </Text>
             <Text >
                 My repository:
