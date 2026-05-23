@@ -31,7 +31,8 @@ export default function Index() {
   const myfunction = i18n.t("function")
   const { width, height } = useWindowDimensions();
   const isDark = isDarkMode();
-
+  const url = Linking.useLinkingURL();
+  console.log(url)
   console.log(website)
   console.log(myfunction)
   const styles = StyleSheet.create({
