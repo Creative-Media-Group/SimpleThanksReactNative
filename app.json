@@ -2,7 +2,7 @@
   "expo": {
     "name": "Simple Thanks",
     "slug": "simplethanks",
-    "version": "2026.4.7",
+    "version": "2026.5.23",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "simplethanks",
