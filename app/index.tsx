@@ -6,6 +6,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import isDarkMode from "../components/CheckDarkMode";
 import CustomButton from "../components/CustomButton";
 import { i18n } from "../utils/mylocalisation";
+import * as Clipboard from 'expo-clipboard';
 
 
 const platform = Device.osName?.toLowerCase();
@@ -27,14 +28,9 @@ export default function Index() {
   const happybirthday = i18n.t("happybirthday")
   const fathersday = i18n.t("fathersday")
   const happyfathersday = i18n.t("happyfathersday")
-  const website = i18n.t("website")
-  const myfunction = i18n.t("function")
   const { width, height } = useWindowDimensions();
   const isDark = isDarkMode();
-  const url = Linking.useLinkingURL();
-  console.log(url)
-  console.log(website)
-  console.log(myfunction)
+  const URL = "https://mywebsite-tct123.fly.dev/";
   const styles = StyleSheet.create({
     bg: {
       flex: 1,
@@ -76,8 +72,12 @@ export default function Index() {
     return myalert(fathersday, happyfathersday)
   }
   const funcwebseite = () => {
-    return Linking.openURL("https://mywebsite-tct123.fly.dev/")
+    return Linking.openURL(URL)
   }
+  const copyToClipboard = async (text: string) => {
+    await Clipboard.setStringAsync(text);
+  };
+
   return (
     <SafeAreaView style={styles.safeareaview}>
       <View style={styles.topview}>
@@ -85,16 +85,16 @@ export default function Index() {
       </View>
       <ScrollView style={styles.bottomview} contentContainerStyle={styles.contentcontainer}>
         <View style={styles.button}>
-          <CustomButton onPress={() => playaudio()} title={happybirthday} />
+          <CustomButton onPress={() => playaudio()} title={happybirthday} onLongPress={() => { }} />
         </View>
         <View style={styles.button}>
-          <CustomButton onPress={() => funcmothersday()} title="Happy Mothersday" />
+          <CustomButton onPress={() => funcmothersday()} title="Happy Mothersday" onLongPress={() => { }} />
         </View>
         <View style={styles.button}>
-          <CustomButton onPress={() => funcfathersday()} title="Happy Fathersday" />
+          <CustomButton onPress={() => funcfathersday()} title="Happy Fathersday" onLongPress={() => { }} />
         </View>
         <View style={styles.button}>
-          <CustomButton onPress={() => funcwebseite()} title="Website" />
+          <CustomButton onPress={() => funcwebseite()} title="Website" onLongPress={() => { copyToClipboard(URL) }} />
         </View>
       </ScrollView>
     </SafeAreaView>
