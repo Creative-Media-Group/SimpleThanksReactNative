@@ -18,7 +18,7 @@ export default function Index() {
         }
     })
     return (
-        <View style={styles.view}>
+        <Host style={styles.view}>
             <Text style={
                 { color: theme.colors.text }
             }>
