@@ -1,8 +1,8 @@
 //import IsDarkMode from "@/components/CheckDarkMode";
+import { Host, Text } from "@expo/ui";
 import { Link, useTheme } from "expo-router";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet } from "react-native";
 import { i18n } from "../utils/mylocalisation";
-
 export default function Index() {
     const theme = useTheme();
     const abouttext = i18n.t("about");
@@ -19,27 +19,21 @@ export default function Index() {
     })
     return (
         <Host style={styles.view}>
-            <Text style={
-                { color: theme.colors.text }
-            }>
+            <Text>
                 {abouttext}:
             </Text>
-            <Text style={{ color: theme.colors.text }}>
+            <Text>
                 My repository:
             </Text>
             <Link href={"https://github.com/Creative-Media-Group/SimpleThanksReactNative"} style={{ color: "blue" }}>GitHub</Link>
-            <Text style={
-                { color: theme.colors.text }
-            }>
+            <Text>
                 My repository:
             </Text>
             <Link href={"https://github.com/Creative-Media-Group/SimpleThanksReactNative"} style={{ color: "blue" }}>GitHub</Link>
-            <Text style={
-                { color: theme.colors.text }
-            }>
+            <Text>
                 My repository:
             </Text>
             <Link href={"https://github.com/Creative-Media-Group/SimpleThanksReactNative"} style={{ color: "blue" }}>GitHub</Link>
-        </View>
+        </Host>
     )
 }
