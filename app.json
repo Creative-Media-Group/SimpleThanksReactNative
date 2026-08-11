@@ -48,7 +48,13 @@
       "expo-audio",
       "expo-font",
       "expo-asset",
-      "expo-build-properties"
+      "expo-build-properties",
+      [
+        "@react-native-tvos/config-tv",
+        {
+          "isTV": false
+        }
+      ]
     ],
     "experiments": {
       "typedRoutes": true
