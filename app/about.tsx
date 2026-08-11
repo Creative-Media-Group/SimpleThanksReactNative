@@ -3,7 +3,7 @@ import { Host, Text } from "@expo/ui";
 import { Link, useTheme } from "expo-router";
 import { StyleSheet } from "react-native";
 import { i18n } from "../utils/mylocalisation";
-export default function Index() {
+export default function About() {
     const theme = useTheme();
     const abouttext = i18n.t("about");
     const styles = StyleSheet.create({

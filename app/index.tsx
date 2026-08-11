@@ -1,4 +1,5 @@
 import { useAudioPlayer } from "expo-audio";
+import * as Clipboard from 'expo-clipboard';
 import * as Device from 'expo-device';
 import * as Linking from 'expo-linking';
 import { Alert, ScrollView, StyleSheet, Text, useWindowDimensions, View } from "react-native";
@@ -6,7 +7,6 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import isDarkMode from "../components/CheckDarkMode";
 import CustomButton from "../components/CustomButton";
 import { i18n } from "../utils/mylocalisation";
-import * as Clipboard from 'expo-clipboard';
 
 
 const platform = Device.osName?.toLowerCase();
