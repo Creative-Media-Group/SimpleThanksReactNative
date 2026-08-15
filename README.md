@@ -5,3 +5,5 @@ Just a simple thanks
 
 ## Open App
 <a href="simplethanks://index">App</a>
+## Screenshots
+![Alternativtext](Bild-URL "Bildtitel hier")
