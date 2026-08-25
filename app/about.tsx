@@ -1,4 +1,4 @@
-//import IsDarkMode from "@/components/CheckDarkMode";
+// import IsDarkMode from "@/components/CheckDarkMode";
 import { Host, Text } from "@expo/ui";
 import { Link, useTheme } from "expo-router";
 import { StyleSheet } from "react-native";
