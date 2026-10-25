@@ -1,4 +1,4 @@
-import en from "../localisation/translations/en.json";
+import en from "../../localisation/translations/en.json";
 // import de from "../localisation/translations/de.json"
 import { getLocales } from "expo-localization";
 import { I18n } from "i18n-js";

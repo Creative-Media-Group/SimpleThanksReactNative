@@ -18,7 +18,7 @@ function myalert(title: string, message: string) {
   }
 }
 
-const audiosrc = require("../assets/sounds/happy-birthday-whistled.wav")
+const audiosrc = require("../../assets/sounds/happy-birthday-whistled.wav")
 
 export default function Index() {
   const text = i18n.t("text");
