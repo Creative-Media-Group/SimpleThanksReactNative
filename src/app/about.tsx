@@ -19,18 +19,18 @@ export default function About() {
     })
     return (
         <Host style={styles.view}>
-            <Text>
+            <Text textStyle={{color:theme.colors.text?.toString()}}>
                 {abouttext}:
             </Text>
-            <Text>
+            <Text textStyle={{color:theme.colors.text?.toString()}}>
                 My repository:
             </Text>
             <Link href={"https://github.com/Creative-Media-Group/SimpleThanksReactNative"} style={{ color: "blue" }}>GitHub</Link>
-            <Text>
+            <Text textStyle={{color:theme.colors.text?.toString()}}>
                 My repository:
             </Text>
             <Link href={"https://github.com/Creative-Media-Group/SimpleThanksReactNative"} style={{ color: "blue" }}>GitHub</Link>
-            <Text>
+            <Text textStyle={{color:theme.colors.text?.toString()}}>
                 My repository:
             </Text>
             <Link href={"https://github.com/Creative-Media-Group/SimpleThanksReactNative"} style={{ color: "blue" }}>GitHub</Link>

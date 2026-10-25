@@ -30,7 +30,7 @@ export default function Index() {
   const happyfathersday = i18n.t("happyfathersday")
   const { width, height } = useWindowDimensions();
   const isDark = isDarkMode();
-  const URL = "https://mywebsite-tct123.fly.dev/";
+  const URL = "https://tct123.codeberg.page/";
   const styles = StyleSheet.create({
     bg: {
       flex: 1,

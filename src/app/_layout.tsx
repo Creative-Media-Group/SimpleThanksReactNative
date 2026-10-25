@@ -20,6 +20,5 @@ export default function RootLayout() {
         </NativeTabs.Trigger>
       </NativeTabs>
     </ThemeProvider>
-  )
-    ;
+  );
 }
