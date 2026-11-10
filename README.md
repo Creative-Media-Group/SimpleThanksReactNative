@@ -6,4 +6,4 @@ Just a simple thanks
 ## Open App
 <a href="simplethanks://index">App</a>
 ## Screenshots
-![Alternativtext](Screenshot_20250802-012044.png "Bildtitel hier")
+![Alternativtext](screenshot.png "Screenshot")
